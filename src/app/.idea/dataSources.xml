@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="psg_m13@iwine.ddns.net" uuid="1555d837-92d3-4d1e-8853-5b4771c3d0d1">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://iwine.ddns.net:3306/psg_m13</jdbc-url>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,63 @@
+plugins {
+    id 'java'
+    id 'maven-publish' // plugin que ens facilita publicar llibreries a repositoris
+    id 'application'
+
+}
+
+group 'org.psg.m15.controls'
+version '1.0'
+
+mainClassName = 'org.psg.m15.controls.integertextfield.Main'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    /*
+    maven {
+        url myMavenRepoReadUrl
+        /* En cas de ser necessari
+        credentials {
+            username myMavenRepoWriteUserName
+            password myMavenRepoWritePassword
+        }
+        */
+//    }
+}
+/*
+// Publicar a un repositori Maven la llibreria (Exemple: https://mymavenrepo.com)
+publishing {
+    repositories {
+        // Les dades estan a ~/.gradle/gradle.properties
+        maven {
+            url myMavenRepoWriteUrl
+            credentials {
+                username myMavenRepoWriteUserName
+                password myMavenRepoWritePassword
+            }
+        }
+    }
+
+    publications {
+        maven(MavenPublication) {
+            groupId = 'cat.dam2.m15.controls' // si no es posa, agafa el definit per defecte
+            artifactId = 'LimitedTextField' //ve del fitxer settings.gradle
+            version = '1.0' //VERSIÓ
+            from components.java
+            // Manifest on cal especificar la classe que inicia l'aplicació
+            jar {
+                manifest {
+                    attributes 'Implementation-Title': 'LimitedTextField',
+                            'Implementation-Version': version,
+                            'Main-Class': 'cat.dam2.m15.controls.limitedtextfield.Main'
+                }
+            }
+        }
+    }
+}
+*/
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'maven-publish'
+//    id  'org.openjfx.javafxplugin' version '0.0.8'
+
+}
+
+group 'org.psg.m15.app'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+//javafx{
+//
+//    version = "11"
+//    modules =['javafx.controls','javafx.fxml']
+//}
+
+repositories {
+
+    maven {
+
+        url myMavenRepoReadUrl
+
+        credentials {
+
+            username myMavenRepoReadUserName
+            password myMavenRepoReadPassword
+        }
+    }
+
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.6.0-M1'
+    // Versió de JDK8
+    testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '4.7.4'
+    compile group: 'io.cucumber', name: 'cucumber-java', version: '4.7.4'
+    // Versió de JDK 13
+//    testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '5.0.0-RC2'
+//    compile group: 'io.cucumber', name: 'cucumber-java', version: '5.0.0-RC2'
+    testCompile "org.testfx:testfx-junit5:4.0.16-alpha"
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.10.Final'
+    compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+    compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.5.0'
+    compile group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.10'
+    compile group: 'commons-configuration', name: 'commons-configuration', version: '1.10'
+    compile group: 'org.jasypt', name: 'jasypt', version: '1.9.2'
+    compile group: 'org.psg.m15.controls', name: 'IntegerTextField', version: '1.0'
+
+    // https://mvnrepository.com/artifact/com.lynden/GMapsFX
+    compile group: 'com.lynden', name: 'GMapsFX', version: '2.12.0'
+}
